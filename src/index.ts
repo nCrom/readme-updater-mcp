@@ -92,8 +92,19 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   }
 
   const filePath = path.resolve(args.filePath); // 절대 경로 확인
-  const contentToAppend = args.contentToAppend;
+  let contentToAppend = args.contentToAppend; // Use let to modify
   const heading = args.heading;
+
+  // --- Add timestamp ---
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+  const day = String(now.getDate()).padStart(2, '0');
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const timestamp = `${year}-${month}-${day}-${hours}:${minutes}`;
+  contentToAppend += ` (${timestamp})`; // Append timestamp to the content
+  // --- End timestamp ---
 
   let originalFileContent = ""; // Initialize as empty string
 
