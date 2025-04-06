@@ -1,5 +1,7 @@
 # readme-updater-mcp
 
+[![smithery badge](https://smithery.ai/badge/@nCrom/readme-updater-mcp)](https://smithery.ai/server/@nCrom/readme-updater-mcp)
+
 Ollama를 사용하여 의미 충돌을 분석하고 README.md 파일을 업데이트하는 MCP 서버입니다.
 
 ## 기능
@@ -20,6 +22,15 @@ Ollama를 사용하여 의미 충돌을 분석하고 README.md 파일을 업데�
 
 ## 설치
 
+### Installing via Smithery
+
+To install readme-updater-mcp for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@nCrom/readme-updater-mcp):
+
+```bash
+npx -y @smithery/cli install @nCrom/readme-updater-mcp --client claude
+```
+
+### Manual Installation
 1.  **저장소 클론:**
     ```bash
     git clone https://github.com/nCrom/readme-updater-mcp.git
