@@ -1,27 +1,46 @@
 {
-  "name": "y",
-  "version": "0.1.0",
-  "description": "y",
-  "private": true,
-  "type": "module",
-  "bin": {
-    "y": "./build/index.js"
-  },
-  "files": [
-    "build"
-  ],
-  "scripts": {
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
-    "prepare": "npm run build",
-    "watch": "tsc --watch",
-    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "0.6.0",
-    "axios": "^1.8.4"
-  },
-  "devDependencies": {
-    "@types/node": "^20.11.24",
-    "typescript": "^5.3.3"
-  }
+    "name": "@nCrom/readme-updater-mcp",
+    "version": "0.1.0",
+    "description": "MCP server to update README.md using Ollama for conflict analysis.",
+    "private": false,
+    "type": "module",
+    "bin": {
+        "readme-updater-mcp": "./build/index.js"
+    },
+    "main": "build/index.js",
+    "files": [
+        "build",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+        "prepare": "npm run build",
+        "watch": "tsc --watch",
+        "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nCrom/readme-updater-mcp.git"
+    },
+    "keywords": [
+        "mcp",
+        "model-context-protocol",
+        "readme",
+        "ollama",
+        "ai"
+    ],
+    "author": "nCrom",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/nCrom/readme-updater-mcp/issues"
+    },
+    "homepage": "https://github.com/nCrom/readme-updater-mcp#readme",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "0.6.0",
+        "axios": "^1.8.4"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.24",
+        "typescript": "^5.3.3"
+    }
 }
